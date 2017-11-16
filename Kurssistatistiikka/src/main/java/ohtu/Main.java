@@ -17,10 +17,20 @@ public class Main {
 
         String bodyText = Request.Get(url).execute().returnContent().asString();
 
-        System.out.println("json-muotoinen data:");
-        System.out.println(bodyText);
+//        System.out.println("json-muotoinen data:");
+//        System.out.println(bodyText);
+        String url2 = "https://studies.cs.helsinki.fi/ohtustats/courseinfo";
 
+        String bodyText2 = Request.Get(url2).execute().returnContent().asString();
+//        System.out.println("json-muotoinen data:");
+//        System.out.println(bodyText2);
         Gson mapper = new Gson();
+
+        Kurssi kurssi = mapper.fromJson(bodyText2, Kurssi.class);
+
+        System.out.println("Kurssi: " + kurssi.getName() + ", " + kurssi.getTerm());
+        System.out.println("");
+
         Submission[] subs = mapper.fromJson(bodyText, Submission[].class);
 
         System.out.println("opiskelijanummero: " + studentNr);
@@ -30,6 +40,7 @@ public class Main {
         int hours = 0;
 
         for (Submission submission : subs) {
+            submission.setKurssi(kurssi);
             exercises += submission.getExercises().size();
             hours += submission.getHuors();
             System.out.println(submission);
