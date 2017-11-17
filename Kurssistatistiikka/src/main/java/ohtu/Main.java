@@ -3,6 +3,8 @@ package ohtu;
 import com.google.gson.Gson;
 import java.io.IOException;
 import org.apache.http.client.fluent.Request;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class Main {
 
@@ -22,12 +24,21 @@ public class Main {
         String url2 = "https://studies.cs.helsinki.fi/ohtustats/courseinfo";
 
         String bodyText2 = Request.Get(url2).execute().returnContent().asString();
-//        System.out.println("json-muotoinen data:");
-//        System.out.println(bodyText2);
+        System.out.println("json-muotoinen data:");
+        System.out.println(bodyText2);
         Gson mapper = new Gson();
 
         Kurssi kurssi = mapper.fromJson(bodyText2, Kurssi.class);
 
+        String url3 = "https://studies.cs.helsinki.fi/ohtustats/stats";
+
+        String bodyText3 = Request.Get(url3).execute().returnContent().asString();
+
+        System.out.println("json-muotoinen data:");
+//        System.out.println(bodyText3);
+        JsonParser parser = new JsonParser();
+        JsonObject parsittuData = parser.parse(bodyText3).getAsJsonObject();
+        
         System.out.println("Kurssi: " + kurssi.getName() + ", " + kurssi.getTerm());
         System.out.println("");
 
@@ -48,6 +59,14 @@ public class Main {
 
         System.out.println("");
         System.out.println("yhteensä: " + exercises + " tehtävää " + hours + " tuntia");
+        
+        JsonObject jsonO = parsittuData.get("1").getAsJsonObject();
+        
+        System.out.println("");
+        System.out.println("kurssilla yhteensä " + jsonO.get("students") + " palautusta, palautettuja tehtäviä " + jsonO.get("exercise_total") + " kpl");
+//        for (String key : parsittuData.keySet()) {
+//            System.out.println("Key: " + key);
+//        }
 
     }
 }

@@ -4,16 +4,11 @@ import java.util.*;
 
 public class Submission {
 
-    /**
-     * @return the kurssi
-     */
+
     public Kurssi getKurssi() {
         return kurssi;
     }
 
-    /**
-     * @param kurssi the kurssi to set
-     */
     public void setKurssi(Kurssi kurssi) {
         this.kurssi = kurssi;
     }
