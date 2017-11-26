@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ohtu.verkkokauppa.KauppaTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-11-26T07:37:09" hostname="LAPTOP-6K3L07EA" time="2.078">
+  <properties/>
+  <testcase name="poistaaTuotteenOstoskoristaOikein" classname="ohtu.verkkokauppa.KauppaTest" time="2.063"/>
+  <testcase name="kauppaPyytaaUudenViitenumeronJokaiselleMaksutapahtumalle" classname="ohtu.verkkokauppa.KauppaTest" time="0.0"/>
+  <testcase name="tyhjanJaLoytyvanTuotteenOstoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.0"/>
+  <testcase name="kahdenEriTuotteenostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.015"/>
+  <testcase name="kahdenSamanTuotteenostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.0"/>
+  <testcase name="aloitaAsiointiNollaaEdellisenOstoksenTiedot" classname="ohtu.verkkokauppa.KauppaTest" time="0.0"/>
+  <testcase name="yhdenTuotteenOstoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
