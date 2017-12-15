@@ -1,2 +1,5 @@
 # Referaatti kandidaatintutkielmasta "Scrumban-menetelmän käyttö ketterässä ohjelmistokehityksessä"
-.. luin sivulle 12 asti
+Scrumban on ketterä ohjelmistotuotanto mentelmä, joka yhdistää ketteriä ohjelmistotuotanto mentelmiä scrumia ja kanbania.
+
+
+Scrumbanin havaittu toimavan arvaamattomissa ja nopeasti muuttuvissa proseisseissa.
